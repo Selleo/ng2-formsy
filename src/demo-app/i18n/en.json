@@ -1,4 +1,7 @@
 {
-  "required": "Required",
-  "minlength": "Required length {{requiredLength}}, actual {{actualLength}}"
+  "errors": {
+    "required": "Required",
+    "minlength": "Required length {{requiredLength}}, actual length {{actualLength}}",
+    "pattern": "Required pattern {{requiredPattern}}"
+  }
 }

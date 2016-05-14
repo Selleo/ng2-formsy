@@ -16,7 +16,11 @@ export class LabelsComponent {
 
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
-      name: ['', Validators.compose([Validators.required, Validators.minLength(2)])]
+      name: ['', Validators.compose([
+        Validators.required,
+        Validators.minLength(2),
+        Validators.pattern('[A-Za-z]+')
+      ])]
     });
   }
 
