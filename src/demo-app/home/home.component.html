@@ -5,3 +5,14 @@ Home
 <button md-fab>
   <md-icon class="md-24">check</md-icon>
 </button>
+
+<form [ngFormModel]="form" (ngSubmit)="onSubmit()" novalidate>
+  <bs-input-container>
+    <label>Email</label>
+    <input ngControl="email" class="form-control">
+  </bs-input-container>
+  <bs-input-container>
+    <label>Password</label>
+    <input ngControl="password" type="password" class="form-control">
+  </bs-input-container>
+</form>

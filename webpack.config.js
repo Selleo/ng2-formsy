@@ -70,22 +70,28 @@ module.exports = function makeWebpackConfig() {
         exclude: /node_modules/
       },
 
-      // Support for .css files
-      {
-        test: /\.css$/,
-        loader: 'style!css'
-      },
-
       // support for .scss files
       {
         test: /\.scss$/,
         loader: 'style!css!sass'
       },
 
+      // Support for .css files
+      {
+        test: /\.css$/,
+        loader: 'style!css'
+      },
+
       // support for .html as raw text
       {
         test: /\.html$/,
         loader: 'raw'
+      },
+
+      // copy those assets to output
+      {
+        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+        loader: 'file?name=fonts/[name].[hash].[ext]?'
       }
     ],
     postLoaders: [],

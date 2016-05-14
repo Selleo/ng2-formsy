@@ -4,6 +4,7 @@ import {HomeComponent} from  './home/home.component';
 import {MdButton} from '@angular2-material/button'
 import {MD_SIDENAV_DIRECTIVES} from '@angular2-material/sidenav'
 
+require('../assets/bootstrap.scss');
 
 @Component({
   selector: 'demo-app',
