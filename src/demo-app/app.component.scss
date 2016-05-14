@@ -109,7 +109,7 @@ header {
       display: block;
       text-decoration: none;
       color: $color-grayy;
-      &:hover {
+      &:hover, &.active {
         text-decoration: none;
         color: $color-white;
         background: rgba($color-white, 0.2);

@@ -3,6 +3,7 @@ import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {HomeComponent} from  './home/home.component';
 import {LoginComponent} from  './login/login.component';
 import {LabelsComponent} from  './labels/labels.component';
+import {RouterActive} from './router-active/router-active.directive';
 
 require('../assets/bootstrap.scss');
 require('./app.component.scss');
@@ -11,8 +12,9 @@ require('./app.component.scss');
   selector: 'demo-app',
   template: require('./app.component.html'),
   directives: [
-    ROUTER_DIRECTIVES
-  ]
+    ROUTER_DIRECTIVES,
+    RouterActive
+]
 })
 @RouteConfig([
   {path: '/', name: 'Home', component: HomeComponent, useAsDefault: true},
