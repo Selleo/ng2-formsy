@@ -3,15 +3,15 @@ import {Validators, ControlGroup, FORM_DIRECTIVES, FormBuilder} from '@angular/c
 import {FORMSY_BS_DIRECTIVES} from '../../main';
 
 @Component({
-  selector: 'label',
-  template: require('./label.component.html'),
+  selector: 'labels',
+  template: require('./labels.component.html'),
   directives: [
     FORMSY_BS_DIRECTIVES,
     FORM_DIRECTIVES
   ]
 })
 
-export class LabelComponent {
+export class LabelsComponent {
   form: ControlGroup;
 
   constructor(private formBuilder: FormBuilder) {
