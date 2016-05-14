@@ -3,21 +3,20 @@ import {Validators, ControlGroup, FORM_DIRECTIVES, FormBuilder} from '@angular/c
 import {FORMSY_BS_DIRECTIVES} from '../../main';
 
 @Component({
-  selector: 'login',
-  template: require('./login.component.html'),
+  selector: 'label',
+  template: require('./label.component.html'),
   directives: [
     FORMSY_BS_DIRECTIVES,
     FORM_DIRECTIVES
   ]
 })
 
-export class LoginComponent {
+export class LabelComponent {
   form: ControlGroup;
 
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
-      email: ['', Validators.required],
-      password: ['', Validators.compose([Validators.required, Validators.minLength(6)])]
+      name: ['', Validators.required]
     });
   }
 
