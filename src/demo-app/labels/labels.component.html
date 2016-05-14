@@ -1,51 +1,48 @@
 <h1>Label</h1>
 
-<div class="container">
-
-  <h3>Full width label, with inline styling</h3>
-  <div class="row">
-    <form [ngFormModel]="form" (ngSubmit)="onSubmit()" novalidate>
-      <bs-input-container>
-        <label class="control-label col-xs-12">Name</label>
-        <div class="col-xs-12">
-          <input ngControl="name" class="form-control">
-          <bs-messages></bs-messages>
-        </div>
-      </bs-input-container>
-    </form>
-  </div>
-
-  <h3>Full width label, without inline styling</h3>
-  <div class="row">
-    <form [ngFormModel]="form" (ngSubmit)="onSubmit()" novalidate>
-      <bs-input-container label="Name">
+<h3>Full width label, with inline styling</h3>
+<div class="row">
+  <form [ngFormModel]="form" (ngSubmit)="onSubmit()" novalidate>
+    <bs-input-container>
+      <label class="control-label col-xs-12">Name</label>
+      <div class="col-xs-12">
         <input ngControl="name" class="form-control">
         <bs-messages></bs-messages>
-      </bs-input-container>
-    </form>
-  </div>
-
-  <h3>Horizontal label, with inline styling</h3>
-  <div class="row">
-    <form [ngFormModel]="form" (ngSubmit)="onSubmit()" class="form-horizontal col-xs-12" novalidate>
-      <bs-input-container>
-        <label class="control-label col-xs-2 col-lg-4">Name</label>
-        <div class="col-xs-10 col-lg-8">
-          <input ngControl="name" class="form-control">
-          <bs-messages></bs-messages>
-        </div>
-      </bs-input-container>
-    </form>
-  </div>
-
-  <h3>Horizontal label, without inline styling</h3>
-  <div class="row">
-    <form [ngFormModel]="form" (ngSubmit)="onSubmit()" bs-form-horizontal label-size="col-xs-2 col-lg-4" novalidate>
-      <bs-input-container label="Name">
-        <input ngControl="name" class="form-control">
-        <bs-messages></bs-messages>
-      </bs-input-container>
-    </form>
-  </div>
-
+      </div>
+    </bs-input-container>
+  </form>
 </div>
+
+<h3>Full width label, without inline styling</h3>
+<div class="row">
+  <form [ngFormModel]="form" (ngSubmit)="onSubmit()" novalidate>
+    <bs-input-container label="Name">
+      <input ngControl="name" class="form-control">
+      <bs-messages></bs-messages>
+    </bs-input-container>
+  </form>
+</div>
+
+<h3>Horizontal label, with inline styling</h3>
+<div class="row">
+  <form [ngFormModel]="form" (ngSubmit)="onSubmit()" class="form-horizontal col-xs-12" novalidate>
+    <bs-input-container>
+      <label class="control-label col-xs-2 col-lg-4">Name</label>
+      <div class="col-xs-10 col-lg-8">
+        <input ngControl="name" class="form-control">
+        <bs-messages></bs-messages>
+      </div>
+    </bs-input-container>
+  </form>
+</div>
+
+<h3>Horizontal label, without inline styling</h3>
+<div class="row">
+  <form [ngFormModel]="form" (ngSubmit)="onSubmit()" bs-form-horizontal label-size="col-xs-2 col-lg-4" novalidate>
+    <bs-input-container label="Name">
+      <input ngControl="name" class="form-control">
+      <bs-messages></bs-messages>
+    </bs-input-container>
+  </form>
+</div>
+
