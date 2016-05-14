@@ -1,15 +1,15 @@
 import {Component} from '@angular/core';
 import {Validators, ControlGroup, FORM_DIRECTIVES, FormBuilder} from '@angular/common';
 import {MdButton} from '@angular2-material/button'
-import {BsInputContainer} from '../../main';
+import {FORMSY_BS_DIRECTIVES} from '../../main';
 
 @Component({
   selector: 'home',
   template: require('./home.component.html'),
   directives: [
-    BsInputContainer,
+    FORMSY_BS_DIRECTIVES,
+    FORM_DIRECTIVES,
     MdButton,
-    FORM_DIRECTIVES
   ]
 })
 
