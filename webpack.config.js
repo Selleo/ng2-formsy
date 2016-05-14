@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var ENV = process.env.npm_lifecycle_event;
@@ -73,13 +74,13 @@ module.exports = function makeWebpackConfig() {
       // support for .scss files
       {
         test: /\.scss$/,
-        loader: 'style!css!sass'
+        loader: 'style!css!postcss!sass'
       },
 
       // Support for .css files
       {
         test: /\.css$/,
-        loader: 'style!css'
+        loader: 'style!css!postcss'
       },
 
       // support for .html as raw text
@@ -159,6 +160,17 @@ module.exports = function makeWebpackConfig() {
       }])
     );
   }
+
+  /**
+   * PostCSS
+   * Reference: https://github.com/postcss/autoprefixer-core
+   * Add vendor prefixes to your css
+   */
+  config.postcss = [
+    autoprefixer({
+      browsers: ['last 2 version']
+    })
+  ];
 
   /**
    * Apply the tslint loader as pre/postLoader
