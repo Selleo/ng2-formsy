@@ -1,49 +1,7 @@
-Home
+<h1>Home</h1>
 
 <button md-button>flat</button>
 <button md-raised-button>raised</button>
 <button md-fab>
   <md-icon class="md-24">check</md-icon>
 </button>
-
-<div class="container">
-  <div class="row">
-    <form [ngFormModel]="form" (ngSubmit)="onSubmit()" novalidate>
-      <bs-input-container>
-        <label class="control-label col-sm-12">Email</label>
-        <div class="col-sm-12">
-          <input ngControl="email" class="form-control">
-          <bs-messages></bs-messages>
-        </div>
-      </bs-input-container>
-      <bs-input-container>
-        <label class="control-label col-sm-12">Password</label>
-        <div class="col-sm-12">
-          <input ngControl="password" type="password" class="form-control">
-          <bs-messages></bs-messages>
-        </div>
-      </bs-input-container>
-    </form>
-  </div>
-
-  <div class="row">
-    <form [ngFormModel]="form" (ngSubmit)="onSubmit()" class="form-horizontal col-sm-12" novalidate>
-      <bs-input-container>
-        <label class="control-label col-sm-2">Email</label>
-        <div class="col-sm-10">
-          <input ngControl="email" class="form-control">
-          <bs-messages></bs-messages>
-        </div>
-      </bs-input-container>
-      <bs-input-container>
-        <label class="control-label col-sm-2">Password</label>
-        <div class="col-sm-10">
-          <input ngControl="password" type="password" class="form-control">
-          <bs-messages></bs-messages>
-        </div>
-      </bs-input-container>
-    </form>
-  </div>
-</div>
-
-
