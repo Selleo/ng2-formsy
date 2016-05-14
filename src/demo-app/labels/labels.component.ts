@@ -16,7 +16,7 @@ export class LabelsComponent {
 
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
-      name: ['', Validators.required]
+      name: ['', Validators.compose([Validators.required, Validators.minLength(2)])]
     });
   }
 
