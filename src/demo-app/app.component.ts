@@ -3,6 +3,7 @@ import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {HomeComponent} from  './home/home.component';
 import {LoginComponent} from  './login/login.component';
 import {LabelsComponent} from  './labels/labels.component';
+import {TranslateService} from 'ng2-translate/ng2-translate';
 
 require('../assets/bootstrap.scss');
 require('./app.component.scss');
@@ -20,4 +21,10 @@ require('./app.component.scss');
   {path: '/labels', name: 'Labels', component: LabelsComponent},
 ])
 export class AppComponent {
+  constructor(translate: TranslateService) {
+    let userLang = navigator.language.split('-')[0];
+    userLang = /(en|pl)/gi.test(userLang) ? userLang : 'en';
+    translate.setDefaultLang('en');
+    translate.use(userLang);
+  }
 }

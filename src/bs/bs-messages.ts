@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, ViewContainerRef} from '@angular/core';
 import {Control} from '@angular/common';
 
 @Component({

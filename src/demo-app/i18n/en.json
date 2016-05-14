@@ -1,0 +1,4 @@
+{
+  "required": "Required",
+  "minlength": "Required length {{requiredLength}}, actual {{actualLength}}"
+}
