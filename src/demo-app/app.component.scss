@@ -145,3 +145,8 @@ header {
     position: relative;
   }
 }
+
+.sidebar-nav > li > a.router-link-active {
+  color: $color-white;
+  background: rgba($color-white, 0.2);
+}
