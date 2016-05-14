@@ -168,7 +168,7 @@ module.exports = function makeWebpackConfig() {
    */
   config.postcss = [
     autoprefixer({
-      browsers: ['last 2 version']
+      browsers: ['last 2 version', '> 1%', 'IE > 8']
     })
   ];
 

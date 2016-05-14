@@ -13,6 +13,7 @@ $screen-md-max: ($screen-lg - 1) !default;
 
 $color-white: #FFF;
 $color-black: #000;
+$color-grayy: #999999;
 $color-gray-light: #D9E0E7;
 $color-gray: #37474F;
 $color-gray-dark: #263238;
@@ -79,10 +80,7 @@ header {
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: #000;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
+  background: $color-black;
   transition: all 0.5s ease;
 }
 
@@ -110,11 +108,11 @@ header {
     a {
       display: block;
       text-decoration: none;
-      color: #999999;
-      &:hover {
+      color: $color-grayy;
+      &:hover, &.active {
         text-decoration: none;
-        color: #fff;
-        background: rgba(255, 255, 255, 0.2);
+        color: $color-white;
+        background: rgba($color-white, 0.2);
       }
       &:active, &:focus {
         text-decoration: none;
@@ -126,9 +124,9 @@ header {
     font-size: 18px;
     line-height: 60px;
     a {
-      color: #999999;
+      color: $color-grayy;
       &:hover {
-        color: #fff;
+        color: $color-white;
         background: none;
       }
     }

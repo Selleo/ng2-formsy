@@ -3,6 +3,7 @@ import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {HomeComponent} from  './home/home.component';
 import {LoginComponent} from  './login/login.component';
 import {LabelsComponent} from  './labels/labels.component';
+import {RouterActive} from './router-active/router-active.directive';
 import {TranslateService} from 'ng2-translate/ng2-translate';
 
 require('../assets/bootstrap.scss');
