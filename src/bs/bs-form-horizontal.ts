@@ -15,7 +15,6 @@ export class BsFormHorizontal {
   ngAfterContentInit() {
     if (this.bsInputContainers) {
       this.bsInputContainers.forEach((bsInputContainer) => {
-        console.log('bsInputContainer.labelSize', bsInputContainer.labelSize, this.labelSize)
         bsInputContainer.labelSize = this.labelSize;
       })
     }

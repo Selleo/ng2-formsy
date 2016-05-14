@@ -8,7 +8,7 @@
 ### Deployment
 
     npm run start:dist
-    npm deploy
+    npm run deploy
 
 ## License
 
