@@ -1,0 +1,103 @@
+//----- media queries breakpoints --------------------------------------------------------------------------------------
+
+// Extra small screen / phone
+$screen-xs: 480px !default;// Small screen / tablet
+$screen-sm: 768px !default;// Medium screen / desktop
+$screen-md: 992px !default;// Large screen / wide desktop
+$screen-lg: 1200px !default;
+
+$screen-xs-max: ($screen-sm - 1) !default;
+$screen-sm-max: ($screen-md - 1) !default;
+$screen-md-max: ($screen-lg - 1) !default;
+//----- colors --------------------------------------------------------------------------------------
+
+$color-white: #FFF;
+$color-black: #000;
+$color-gray-light: #D9E0E7;
+$color-gray: #37474F;
+$color-gray-dark: #263238;
+$color-blue: #03A9F4;
+$color-red: #F44336;
+$color-green: #009688;
+$color-purple: #9C27B0;
+
+//----- global styles --------------------------------------------------------------------------------------
+
+.md-toolbar__flex {
+  flex: 1 1 auto;
+}
+
+.navbar, .panel-group .panel {
+  border-radius: 0;
+}
+
+.main--aside {
+  padding-left: 0 !important;
+  .panel-body {
+    padding: 0;
+  }
+  .list-group {
+    margin: 0;
+  }
+  .list-group-item {
+    border-radius: 0;
+  }
+}
+
+.panel-heading {
+  cursor: pointer;
+}
+
+header {
+  @media (min-width: $screen-sm) {
+    .navbar {
+      margin-bottom: 0;
+    }
+    .nav {
+      display: none !important;
+    }
+  }
+}
+
+body {
+  background-color: #3a3a3a;
+}
+
+aside {
+  background-color: #333;
+}
+
+.navbar {
+  border-top: 3px solid #333;
+}
+
+.panel-default > .panel-heading {
+  background-color: #333;
+  a {
+    color: #FFF;
+  }
+}
+
+a.list-group-item {
+  background-color: #333;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  &.active, &.active:focus, &.active:hover, &:focus, &:hover {
+    border-color: transparent;
+    background: rgba(0, 0, 0, 0.8)
+  }
+}
+
+.outer {
+  padding: 10px;
+  background-color: #6e6e6e;
+}
+
+.inner {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background: #fff;
+  border: 10px solid #e4e4e4;
+}
