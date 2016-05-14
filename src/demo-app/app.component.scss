@@ -49,11 +49,12 @@ $color-purple: #9C27B0;
   cursor: pointer;
 }
 
+.navbar {
+  margin-bottom: 0;
+}
+
 header {
   @media (min-width: $screen-sm) {
-    .navbar {
-      margin-bottom: 0;
-    }
     .nav {
       display: none !important;
     }
