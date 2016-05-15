@@ -13,6 +13,8 @@ import {FORMSY_BS_DIRECTIVES} from '../../main';
 
 export class ToggleComponent {
   form: ControlGroup;
+  
+  code: string = require('!!raw!./toggle.component.ts');
 
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
