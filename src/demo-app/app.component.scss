@@ -1,3 +1,6 @@
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import '~bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
 //----- media queries breakpoints --------------------------------------------------------------------------------------
 
 // Extra small screen / phone
@@ -33,13 +36,15 @@ $sidebar-width: 220px;
 .navbar, .panel-group .panel {
   border-radius: 0;
 }
+
 .navbar-inverse {
   background-color: #035AB0;
   border-color: #1C5EA0;
-  .navbar-brand{
+  .navbar-brand {
     color: #FFF;
   }
 }
+
 .main--aside {
   padding-left: 0 !important;
   .panel-body {
@@ -80,9 +85,11 @@ header {
     padding-left: $sidebar-width;
   }
 }
-.sidebar-brand{
+
+.sidebar-brand {
   color: $color-grayy;
 }
+
 .sidebar-wrapper {
   z-index: 1000;
   position: fixed;
@@ -105,9 +112,11 @@ header {
   position: absolute;
   margin-right: -$sidebar-width;
 }
+
 .navbar-brand {
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.06);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
 }
+
 .sidebar-nav {
   position: absolute;
   top: 0;
@@ -146,18 +155,26 @@ header {
     }
   }
 }
+
 .main--content {
   margin: 25px 12px;
 }
+
 @keyframes topAnimate {
-  0%, 50%   { transform: translateY(0px) }
-  100% { transform: translateY(-50px) }
+  0%, 50% {
+    transform: translateY(0px)
+  }
+  100% {
+    transform: translateY(-50px)
+  }
 }
-@media (min-width: 768px) and (max-width: 800px){
+
+@media (min-width: 768px) and (max-width: 800px) {
   .main--content {
     animation: topAnimate 1s ease-out;
   }
 }
+
 @media (min-width: 768px) {
   .navbar {
     display: none;
@@ -177,7 +194,8 @@ header {
     position: relative;
   }
 }
-body, .navbar-inverse .navbar-nav > li >  {
+
+body, .navbar-inverse .navbar-nav > li > {
   a.router-link-active {
     &, &:hover, &:focus {
       color: $color-white;
@@ -186,7 +204,7 @@ body, .navbar-inverse .navbar-nav > li >  {
   }
 }
 
-.logo{
+.logo {
   font-size: 30px;
   color: #FFF;
   padding: 12px;
@@ -200,6 +218,7 @@ body, .navbar-inverse .navbar-nav > li >  {
   }
 
 }
-.home-link span{
+
+.sidebar-nav span {
   display: inline;
 }

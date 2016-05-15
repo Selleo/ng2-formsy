@@ -5,7 +5,6 @@ import {BasicPage} from './basic/basic.page';
 import {SignupPage} from './signup/signup.page';
 import {TranslateService} from 'ng2-translate/ng2-translate';
 
-require('../assets/bootstrap.scss');
 require('./app.component.scss');
 
 @Component({
