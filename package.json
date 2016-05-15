@@ -1,6 +1,6 @@
 {
   "name": "ng2-formsy",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "scripts": {
     "clean": "rimraf typings src/**/*.{js,d.ts}",
     "build": "typings install && tsc",
