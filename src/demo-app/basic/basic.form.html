@@ -1,0 +1,10 @@
+<form [ngFormModel]="form" (ngSubmit)="onSubmit()" novalidate>
+  <bs-input-container>
+    <label class="control-label">Name</label>
+    <div>
+      <input ngControl="name" class="form-control">
+      <bs-messages></bs-messages>
+    </div>
+  </bs-input-container>
+  <button type="submit" class="btn btn-default" [disabled]="!form.valid">Submit</button>
+</form>

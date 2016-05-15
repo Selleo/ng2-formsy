@@ -4,6 +4,7 @@ import {HomeComponent} from './home/home.component';
 import {SignupComponent} from './signup/signup.component';
 import {LabelsComponent} from './labels/labels.component';
 import {ToggleComponent} from './toggle/toggle.component';
+import {BasicPage} from './basic/basic.page';
 import {TranslateService} from 'ng2-translate/ng2-translate';
 
 require('../assets/bootstrap.scss');
@@ -21,6 +22,7 @@ require('./app.component.scss');
   {path: '/signup', name: 'Signup', component: SignupComponent},
   {path: '/labels', name: 'Labels', component: LabelsComponent},
   {path: '/toggle', name: 'Toggle', component: ToggleComponent},
+  {path: '/basic', name: 'Basic', component: BasicPage},
 ])
 export class AppComponent {
   constructor(translate: TranslateService) {
