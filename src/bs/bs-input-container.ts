@@ -7,13 +7,13 @@ import {BsMessages} from "./bs-messages";
   template: `
     <div class="form-group" [ngClass]="{'has-error': control.errors && control.touched}">
       <ng-content *ngIf="!label" select="label,div"></ng-content>
-      <div *ngIf="!!label">
+      <div [class.row]="!horizontal" *ngIf="!!label">
         <label class="control-label {{labelSize}}">{{ label }}</label>
         <div class="{{contentSize}}">
           <ng-content></ng-content>
         </div>
       </div>
-		</div>
+    </div>
   `,
   styles: [],
   providers: [],
@@ -25,6 +25,7 @@ export class BsInputContainer {
   @Input('label-size') labelSize: string = 'col-xs-12';
   @ContentChild(NgControl) control: Control;
   @ContentChild(BsMessages) bsMessages: BsMessages;
+  horizontal: boolean = false;
 
   ngAfterContentInit() {
     if (this.bsMessages && !this.bsMessages.control) {
@@ -40,7 +41,7 @@ export class BsInputContainer {
       if (!size) {
         return labelSize;
       } else {
-        return size == 12 ? `${prefix}${size}` : `${prefix}${12-size}`;
+        return size == 12 ? `${prefix}${size}` : `${prefix}${12 - size}`;
       }
     }).join(' ');
   }

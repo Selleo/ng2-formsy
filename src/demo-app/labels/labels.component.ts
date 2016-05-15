@@ -14,7 +14,9 @@ import {FORMSY_BS_DIRECTIVES} from '../../main';
 export class LabelsComponent {
   form: ControlGroup;
 
-  // fileContent = require("raw!./labels.component.ts");
+  codeTs: string = require('!!raw!./labels.component.ts');
+  codeHtml: string = require('!!raw!./labels.component.html');
+
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
       name: ['', Validators.compose([

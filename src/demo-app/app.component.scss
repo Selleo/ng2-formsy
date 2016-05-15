@@ -160,7 +160,7 @@ header {
     padding-left: 250px;
   }
   .main--content {
-    margin: 0 12px;
+    margin: 0 25px;
     transform: translateY(-50px)
   }
   header, .sidebar-wrapper {
@@ -178,4 +178,8 @@ header .navbar-nav, .sidebar-nav{
       background: rgba($color-white, 0.2);
     }
   }
+}
+
+pre {
+  margin: 25px;
 }

@@ -4,8 +4,7 @@ import {BsInputContainer} from './bs-input-container';
 @Directive({
   selector: '[bs-form-horizontal]',
   host: {
-    '[class.form-horizontal]': 'true',
-    '[class.col-xs-12]': 'true'
+    '[class.form-horizontal]': 'true'
   }
 })
 export class BsFormHorizontal {
@@ -16,6 +15,7 @@ export class BsFormHorizontal {
     if (this.bsInputContainers) {
       this.bsInputContainers.forEach((bsInputContainer) => {
         bsInputContainer.labelSize = this.labelSize;
+        bsInputContainer.horizontal = true;
       })
     }
   }
