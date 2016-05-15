@@ -1,20 +1,20 @@
-<div class="row">
-  <form [ngFormModel]="form" (ngSubmit)="onSubmit()" novalidate>
-    <bs-input-container label="Email">
-      <input ngControl="email" class="form-control">
-      <bs-messages></bs-messages>
-    </bs-input-container>
+<form [ngFormModel]="form" (ngSubmit)="onSubmit()" novalidate>
+  <bs-input-container label="Email">
+    <input ngControl="email" class="form-control">
+    <bs-messages></bs-messages>
+  </bs-input-container>
 
-    <bs-input-container label="Password">
-      <input ngControl="password" type="password" class="form-control">
-      <bs-messages></bs-messages>
-    </bs-input-container>
+  <bs-input-container label="Password">
+    <input ngControl="password" type="password" class="form-control">
+    <bs-messages></bs-messages>
+  </bs-input-container>
 
-    <bs-input-container label="Company" class="col-xs-9">
-      <input ngControl="company" class="form-control">
-      <bs-messages></bs-messages>
-    </bs-input-container>
+  <bs-input-container label="Company" class="col-xs-9">
+    <input ngControl="company" class="form-control">
+    <bs-messages></bs-messages>
+  </bs-input-container>
 
+  <div class="row">
     <div class="col-xs-3">
       <button type="submit" class="btn btn-default" (click)="moreInfo=!moreInfo">Toggle more info</button>
     </div>
@@ -23,7 +23,7 @@
       <input ngControl="jobTitle" class="form-control">
       <bs-messages></bs-messages>
     </bs-input-container>
+  </div>
 
-    <button type="submit" class="btn btn-default" [disabled]="!form.valid">Submit</button>
-  </form>
-</div>
+  <button type="submit" class="btn btn-default" [disabled]="!form.valid">Submit</button>
+</form>
