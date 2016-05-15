@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
-import {HomeComponent} from './home/home.component';
+import {IntroductionPage} from './introduction/introduction.page';
 import {BasicPage} from './basic/basic.page';
 import {SignupPage} from './signup/signup.page';
 import {TranslateService} from 'ng2-translate/ng2-translate';
@@ -16,7 +16,7 @@ require('./app.component.scss');
   ]
 })
 @RouteConfig([
-  {path: '/', name: 'Home', component: HomeComponent, useAsDefault: true},
+  {path: '/', name: 'Introduction', component: IntroductionPage, useAsDefault: true},
   {path: '/basic', name: 'Basic', component: BasicPage},
   {path: '/signup', name: 'Signup', component: SignupPage},
 ])
