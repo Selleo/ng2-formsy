@@ -14,6 +14,7 @@
     "node_modules"
   ],
   "files": [
+    "src/ng2-formsy.ts",
     "typings/main.d.ts"
   ]
 }

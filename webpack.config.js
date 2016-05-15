@@ -52,7 +52,10 @@ module.exports = function makeWebpackConfig() {
       './src/demo-app'
     ],
     // only discover files that have those extensions
-    extensions: ['', '.ts', '.js', '.json', '.css', '.scss', '.html']
+    extensions: ['', '.ts', '.js', '.json', '.css', '.scss', '.html'],
+    alias: {
+      'ng2-formsy': path.resolve('./src/ng2-formsy.ts')
+    }
   };
 
   /**

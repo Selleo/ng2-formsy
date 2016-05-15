@@ -1,6 +1,6 @@
 import {Component, Input, ViewChild, ViewContainerRef, ComponentResolver, OnInit} from '@angular/core';
 import {FORM_DIRECTIVES, FormBuilder} from '@angular/common';
-import {FORMSY_BS_DIRECTIVES} from '../../main';
+import {FORMSY_BS_DIRECTIVES} from 'ng2-formsy';
 import {BasicForm} from './basic.form';
 
 @Component({

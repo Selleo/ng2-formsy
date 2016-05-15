@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {Validators, ControlGroup, FORM_DIRECTIVES, FormBuilder} from '@angular/common';
-import {FORMSY_BS_DIRECTIVES} from '../../main';
+import {FORMSY_BS_DIRECTIVES} from 'ng2-formsy';
 
 @Component({
   selector: 'basic-form',
