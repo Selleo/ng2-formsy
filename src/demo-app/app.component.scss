@@ -51,7 +51,7 @@ p {
   background-color: #035AB0;
   border-color: #1C5EA0;
   .navbar-brand {
-    color: #FFF;
+    color: $color-white;
   }
 }
 
@@ -86,8 +86,8 @@ header {
 
 //----- sidebar --------------------------------------------------------------------------------------
 .wrapper {
-  padding-left: 0;
   padding-bottom: 200px;
+  padding-left: 0;
   transition: all 0.5s ease;
   &.toggled {
     padding-left: $sidebar-width;
@@ -99,26 +99,26 @@ header {
 }
 
 .sidebar-wrapper {
-  z-index: 1000;
-  position: fixed;
-  left: $sidebar-width;
-  width: 0;
+  background: $color-blue;
   height: 100%;
+  left: $sidebar-width;
   margin-left: -$sidebar-width;
   overflow-y: auto;
-  background: $color-blue;
+  position: fixed;
   transition: all 0.5s ease;
+  width: 0;
+  z-index: 1000;
 }
 
 .page-content-wrapper {
-  width: 100%;
-  position: absolute;
   padding: 15px;
+  position: absolute;
+  width: 100%;
 }
 
 .wrapper.toggled #page-content-wrapper {
-  position: absolute;
   margin-right: -$sidebar-width;
+  position: absolute;
 }
 
 .navbar-brand {
@@ -130,22 +130,22 @@ header {
   top: 0;
   width: $sidebar-width;
   ul {
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
   }
   li {
-    text-indent: 20px;
     line-height: 40px;
+    text-indent: 20px;
     a {
-      display: block;
-      text-decoration: none;
       color: $color-grayy;
+      display: block;
       font-size: 16px;
+      text-decoration: none;
       &:hover, &.active, &:focus {
-        text-decoration: none;
-        color: $color-white;
         background: rgba($color-white, 0.2);
+        color: $color-white;
+        text-decoration: none;
       }
       &:active, &:focus {
         text-decoration: none;
@@ -157,8 +157,8 @@ header {
     a {
       color: $color-grayy;
       &:hover {
-        color: $color-white;
         background: none;
+        color: $color-white;
       }
     }
   }
@@ -177,13 +177,13 @@ header {
   }
 }
 
-@media (min-width: 768px) and (max-width: 800px) {
+@media (min-width: $screen-sm) and (max-width: 800px) {
   .main--content {
     animation: topAnimate 1s ease-out;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-sm) {
   .navbar {
     display: none;
   }
@@ -206,24 +206,24 @@ header {
 body, .navbar-inverse .navbar-nav > li > {
   a.router-link-active {
     &, &:hover, &:focus {
-      color: $color-white;
       background: rgba($color-white, 0.2);
+      color: $color-white;
     }
   }
 }
 
 .logo {
-  font-size: 30px;
-  color: #FFF;
-  padding: 12px 20px;
-  display: block;
   background-color: #035AB0;
   border-color: #1C5EA0;
-  text-decoration: none;
+  color: $color-white;
+  display: block;
+  font-size: 30px;
   line-height: 1.1;
+  padding: 12px 20px;
+  text-decoration: none;
   &:hover, &:focus {
-    text-decoration: none;
-    color: $color-white
+    color: $color-white;
+    text-decoration: none
   }
 
 }
@@ -239,14 +239,15 @@ body, .navbar-inverse .navbar-nav > li > {
 .hero-feature {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   &__grid{
-    padding: 0 20px 4px;
-    width: 30%;
     border: 1px solid #CCC;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
+    padding: 0 20px 4px;
+    width: 30%;
     justify-content: space-around;
   }
 
@@ -258,6 +259,13 @@ body, .navbar-inverse .navbar-nav > li > {
   p {
     font-size: 14px;
     text-align: justify;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    &__grid {
+      width: 100%;
+      margin-bottom: 12px;
+    }
   }
 }
 
