@@ -13,13 +13,13 @@ $screen-md-max: ($screen-lg - 1) !default;
 
 $color-white: #FFF;
 $color-black: #000;
-$color-grayy: #999999;
+$color-grayy: #DBDBDB;
 $color-gray-light: #D9E0E7;
 $color-gray: #37474F;
 $color-gray-dark: #263238;
-$color-blue: #03A9F4;
+$color-blue: #106CC8;
 $color-red: #F44336;
-$color-green: #009688;
+$color-green: #00BCD4;
 $color-purple: #9C27B0;
 
 //----- global styles --------------------------------------------------------------------------------------
@@ -31,7 +31,13 @@ $color-purple: #9C27B0;
 .navbar, .panel-group .panel {
   border-radius: 0;
 }
-
+.navbar-inverse {
+  background-color: #035AB0;
+  border-color: #1C5EA0;
+  .navbar-brand{
+    color: #FFF;
+  }
+}
 .main--aside {
   padding-left: 0 !important;
   .panel-body {
@@ -45,7 +51,7 @@ $color-purple: #9C27B0;
   }
 }
 
-.panel-heading {
+.panel-heading, .navbar .container-fluid {
   cursor: pointer;
 }
 
@@ -72,7 +78,9 @@ header {
     padding-left: 250px;
   }
 }
-
+.sidebar-brand{
+  color: $color-grayy;
+}
 .sidebar-wrapper {
   z-index: 1000;
   position: fixed;
@@ -81,7 +89,7 @@ header {
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: $color-black;
+  background: $color-blue;
   transition: all 0.5s ease;
 }
 
@@ -95,7 +103,9 @@ header {
   position: absolute;
   margin-right: -250px;
 }
-
+.navbar-brand {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.06);
+}
 .sidebar-nav {
   position: absolute;
   top: 0;
@@ -110,7 +120,7 @@ header {
       display: block;
       text-decoration: none;
       color: $color-grayy;
-      &:hover, &.active {
+      &:hover, &.active, &:focus {
         text-decoration: none;
         color: $color-white;
         background: rgba($color-white, 0.2);
@@ -133,12 +143,18 @@ header {
     }
   }
 }
-
+.main--content {
+  margin: 25px 12px;
+}
 @media (min-width: 768px) {
   .wrapper {
     padding-left: 250px;
   }
-  .sidebar-wrapper {
+  .main--content {
+    margin: 0 12px;
+    transform: translateY(-25px)
+  }
+  header, .sidebar-wrapper {
     width: 250px;
   }
   .page-content-wrapper {
@@ -148,7 +164,9 @@ header {
 }
 header .navbar-nav, .sidebar-nav{
   & > li > a.router-link-active {
-    color: $color-white;
-    background: rgba($color-white, 0.2);
+    &, &:hover, &:focus {
+      color: $color-white;
+      background: rgba($color-white, 0.2);
+    }
   }
 }
