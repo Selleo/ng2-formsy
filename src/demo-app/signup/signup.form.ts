@@ -24,5 +24,6 @@ export class SignupForm {
   }
 
   onSubmit() {
+    // submit
   }
 }

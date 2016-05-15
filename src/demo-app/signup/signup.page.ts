@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {SignupForm} from './signup.form'
+import {SignupForm} from './signup.form';
 
 @Component({
   selector: 'basic-page',

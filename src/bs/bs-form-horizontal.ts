@@ -16,7 +16,7 @@ export class BsFormHorizontal {
       this.bsInputContainers.forEach((bsInputContainer) => {
         bsInputContainer.labelSize = this.labelSize;
         bsInputContainer.horizontal = true;
-      })
+      });
     }
   }
 }

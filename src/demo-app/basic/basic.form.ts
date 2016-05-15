@@ -24,5 +24,6 @@ export class BasicForm {
   }
 
   onSubmit() {
+    // submit
   }
 }
