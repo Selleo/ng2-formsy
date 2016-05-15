@@ -25,8 +25,20 @@ $color-red: #F44336;
 $color-green: #00BCD4;
 $color-purple: #9C27B0;
 
-
 $sidebar-width: 220px;
+$font-size-h1:                    30px;
+$font-size-h2:                    22px;
+$font-size-h3:                    14px;
+$font-size-h4:                    12px;
+
+$font-sizes: $font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4;
+
+@for $i from 1 through 4 {
+  h#{$i}, .h#{$i}, %h#{$i} {
+    font-size: nth($font-sizes, $i)
+  }
+}
+
 //----- global styles --------------------------------------------------------------------------------------
 
 .md-toolbar__flex {
@@ -77,9 +89,7 @@ header {
 //----- sidebar --------------------------------------------------------------------------------------
 .wrapper {
   padding-left: 0;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
+  padding-bottom: 200px;
   transition: all 0.5s ease;
   &.toggled {
     padding-left: $sidebar-width;
@@ -207,11 +217,12 @@ body, .navbar-inverse .navbar-nav > li > {
 .logo {
   font-size: 30px;
   color: #FFF;
-  padding: 12px;
+  padding: 12px 20px;
   display: block;
   background-color: #035AB0;
   border-color: #1C5EA0;
   text-decoration: none;
+  line-height: 1.1;
   &:hover, &:focus {
     text-decoration: none;
     color: $color-white
@@ -221,4 +232,8 @@ body, .navbar-inverse .navbar-nav > li > {
 
 .sidebar-nav span {
   display: inline;
+}
+
+.page-head{
+  margin-top: 12px;
 }
