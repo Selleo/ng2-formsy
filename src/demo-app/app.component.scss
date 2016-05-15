@@ -110,9 +110,11 @@ header {
   position: absolute;
   top: 0;
   width: 250px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
   li {
     text-indent: 20px;
     line-height: 40px;
@@ -120,6 +122,7 @@ header {
       display: block;
       text-decoration: none;
       color: $color-grayy;
+      font-size: 16px;
       &:hover, &.active, &:focus {
         text-decoration: none;
         color: $color-white;
@@ -130,10 +133,8 @@ header {
       }
     }
   }
-  > .sidebar-brand {
-    height: 65px;
+  .sidebar-brand {
     font-size: 18px;
-    line-height: 60px;
     a {
       color: $color-grayy;
       &:hover {
@@ -156,12 +157,15 @@ header {
   }
 }
 @media (min-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
   .wrapper {
     padding-left: 250px;
   }
   .main--content {
     margin: 0 25px;
-    transform: translateY(-50px)
   }
   header, .sidebar-wrapper {
     width: 250px;
@@ -171,8 +175,8 @@ header {
     position: relative;
   }
 }
-header .navbar-nav, .sidebar-nav{
-  & > li > a.router-link-active {
+body, .navbar-inverse .navbar-nav > li >  {
+  a.router-link-active {
     &, &:hover, &:focus {
       color: $color-white;
       background: rgba($color-white, 0.2);
@@ -182,4 +186,21 @@ header .navbar-nav, .sidebar-nav{
 
 pre {
   margin: 25px;
+}
+.logo{
+  font-size: 30px;
+  color: #FFF;
+  padding: 12px;
+  display: block;
+  background-color: #035AB0;
+  border-color: #1C5EA0;
+  text-decoration: none;
+  &:hover, &:focus {
+    text-decoration: none;
+    color: $color-white
+  }
+
+}
+.home-link span{
+  display: inline;
 }
