@@ -1,7 +1,6 @@
 <header>
   <nav class="navbar navbar-default navbar-inverse">
     <div class="container-fluid" router-active [routerLink]=" ['Home'] ">
-
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                 data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -29,38 +28,36 @@
 <div class="wrapper">
   <div class="sidebar-wrapper">
     <ul class="sidebar-nav">
+      <li>
+        <a router-active [routerLink]="['Home']">
+          <span class="glyphicon glyphicon-home"></span>
+          <span>Home</span>
+        </a>
+      </li>
+
       <li class="sidebar-brand">
         Examples:
       </li>
 
       <li>
-        <a router-active [routerLink]=" ['Labels'] " >
+        <a router-active [routerLink]="['Labels']">
           <span class="glyphicon glyphicon-tasks"></span>
           <span>Labels</span>
         </a>
       </li>
 
       <li>
-        <a router-active [routerLink]=" ['Login'] " >
+        <a router-active [routerLink]="['Login']">
           <span class="glyphicon glyphicon-align-left"></span>
           <span>Login</span>
         </a>
       </li>
 
       <li>
-        <a href="#">Overview</a>
-      </li>
-      <li>
-        <a href="#">Events</a>
-      </li>
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="#">Services</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
+        <a router-active [routerLink]="['Toggle']">
+          <span class="glyphicon glyphicon-align-left"></span>
+          <span>Toggle</span>
+        </a>
       </li>
     </ul>
   </div>
