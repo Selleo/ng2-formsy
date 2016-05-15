@@ -4,7 +4,7 @@
   <div class="col-xs-12">
     <h3>TypeScript</h3>
   </div>
-  <div class="col-xs-12">
+  <div class="col-xs-12 col-md-8">
     <pre>{{ codeTs }}</pre>
   </div>
 </div>
@@ -12,12 +12,11 @@
 <div *ngFor="let template of templates">
   <div class="row">
     <div class="col-xs-12">
-      <h3> {{ template.title }}</h3>
+      <h2> {{ template.title }}</h2>
     </div>
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12 col-md-8">
       <pre>{{ template.markup }}</pre>
-    </div>
-    <div class="col-xs-12 col-md-6">
+      <h3>Preview:</h3>
       <basic-form-mux [template]="template.markup"></basic-form-mux>
     </div>
   </div>
