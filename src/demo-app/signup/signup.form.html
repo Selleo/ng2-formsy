@@ -1,16 +1,12 @@
-<h1>Toggle</h1>
-
-<pre class="prettyprint">{{code}}</pre>
-
 <div class="row">
   <form [ngFormModel]="form" (ngSubmit)="onSubmit()" novalidate>
-    <bs-input-container label="First Name" class="col-xs-6">
-      <input ngControl="firstName" class="form-control">
+    <bs-input-container label="Email">
+      <input ngControl="email" class="form-control">
       <bs-messages></bs-messages>
     </bs-input-container>
 
-    <bs-input-container label="Last Name" class="col-xs-6">
-      <input ngControl="lastName" class="form-control">
+    <bs-input-container label="Password">
+      <input ngControl="password" type="password" class="form-control">
       <bs-messages></bs-messages>
     </bs-input-container>
 
@@ -31,4 +27,3 @@
     <button type="submit" class="btn btn-default" [disabled]="!form.valid">Submit</button>
   </form>
 </div>
-

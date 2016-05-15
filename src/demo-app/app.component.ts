@@ -1,10 +1,8 @@
 import {Component} from '@angular/core';
 import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {HomeComponent} from './home/home.component';
-import {SignupComponent} from './signup/signup.component';
-import {LabelsComponent} from './labels/labels.component';
-import {ToggleComponent} from './toggle/toggle.component';
 import {BasicPage} from './basic/basic.page';
+import {SignupPage} from './signup/signup.page';
 import {TranslateService} from 'ng2-translate/ng2-translate';
 
 require('../assets/bootstrap.scss');
@@ -19,10 +17,8 @@ require('./app.component.scss');
 })
 @RouteConfig([
   {path: '/', name: 'Home', component: HomeComponent, useAsDefault: true},
-  {path: '/signup', name: 'Signup', component: SignupComponent},
-  {path: '/labels', name: 'Labels', component: LabelsComponent},
-  {path: '/toggle', name: 'Toggle', component: ToggleComponent},
   {path: '/basic', name: 'Basic', component: BasicPage},
+  {path: '/signup', name: 'Signup', component: SignupPage},
 ])
 export class AppComponent {
   constructor(translate: TranslateService) {

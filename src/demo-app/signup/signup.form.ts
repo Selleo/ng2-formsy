@@ -3,23 +3,20 @@ import {Validators, ControlGroup, FORM_DIRECTIVES, FormBuilder} from '@angular/c
 import {FORMSY_BS_DIRECTIVES} from '../../main';
 
 @Component({
-  selector: 'toggle',
-  template: require('./toggle.component.html'),
+  selector: 'signup-form',
+  template: require('./signup.form.html'),
   directives: [
     FORMSY_BS_DIRECTIVES,
     FORM_DIRECTIVES
   ]
 })
-
-export class ToggleComponent {
+export class SignupForm {
   form: ControlGroup;
-  
-  code: string = require('!!raw!./toggle.component.ts');
 
-  constructor(private formBuilder: FormBuilder) {
-    this.form = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
+  constructor(formBuilder: FormBuilder) {
+    this.form = formBuilder.group({
+      email: ['', Validators.required],
+      password: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
       company: ['', Validators.required],
       jobTitle: ['', Validators.required]
     });
