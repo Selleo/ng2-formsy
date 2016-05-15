@@ -18,12 +18,7 @@ $color-white: #FFF;
 $color-black: #000;
 $color-grayy: #DBDBDB;
 $color-gray-light: #D9E0E7;
-$color-gray: #37474F;
-$color-gray-dark: #263238;
 $color-blue: #106CC8;
-$color-red: #F44336;
-$color-green: #00BCD4;
-$color-purple: #9C27B0;
 
 $sidebar-width: 220px;
 $font-size-h1:                    30px;
@@ -37,6 +32,9 @@ $font-sizes: $font-size-h1, $font-size-h2, $font-size-h3, $font-size-h4;
   h#{$i}, .h#{$i}, %h#{$i} {
     font-size: nth($font-sizes, $i)
   }
+}
+p {
+  font-size: 16px;
 }
 
 //----- global styles --------------------------------------------------------------------------------------
@@ -236,4 +234,34 @@ body, .navbar-inverse .navbar-nav > li > {
 
 .page-head{
   margin-top: 12px;
+}
+
+.hero-feature {
+  display: flex;
+  justify-content: space-between;
+
+  &__grid{
+    padding: 0 20px 4px;
+    width: 30%;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  h3 {
+    text-align: center;
+
+  }
+
+  p {
+    font-size: 14px;
+    text-align: justify;
+  }
+}
+
+pre.prettyprint {
+  border: 1px solid #ccc !important;
+  padding: 9px !important;
 }
