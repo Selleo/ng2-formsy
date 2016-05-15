@@ -1,6 +1,6 @@
 {
   "name": "ng2-formsy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "clean": "rimraf typings src/**/*.{js,d.ts}",
     "build": "typings install && tsc",
@@ -8,7 +8,8 @@
     "start": "webpack-dev-server",
     "start:dist": "webpack && http-server -p 3000 ./dist",
     "deploy": "surge --project ./dist --domain formsy.2016.angularattack.io",
-    "prepublish": "npm run lint && npm run build"
+    "prepublish": "npm run lint && npm run build",
+    "postinstall": "npm run build"
   },
   "license": "ISC",
   "repository": {
