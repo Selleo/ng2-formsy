@@ -10,10 +10,12 @@ import {BasicFormMux} from './basic.form.mux'
 })
 
 export class BasicPage {
-  templates: string[] = [
-    require('./markup.html'),
-    require('./markup-custom.html'),
-    require('./horizontal-label.html'),
-    require('./horizontal-label-custom.html')
+  codeTs: string = require('!!raw!./basic.form.ts');
+  
+  templates = [
+    { markup: require('./markup.html'), title: 'Markup'},
+    { markup: require('./markup-custom.html'), title: 'Markup custom'},
+    { markup: require('./horizontal-label.html'), title: 'Horizontal label'},
+    { markup: require('./horizontal-label-custom.html'), title: 'Horizontal label custom'}
   ]
 }

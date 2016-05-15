@@ -1,5 +1,24 @@
 <h1>Basic Page</h1>
 
-<basic-form-mux [template]="template" *ngFor="let template of templates">
-  {{ template }}
-</basic-form-mux>
+<div class="row">
+  <div class="col-xs-12">
+    <h3>TypeScript</h3>
+  </div>
+  <div class="col-xs-12">
+    <pre>{{ codeTs }}</pre>
+  </div>
+</div>
+
+<div *ngFor="let template of templates">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3> {{ template.title }}</h3>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <pre>{{ template.markup }}</pre>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <basic-form-mux [template]="template.markup"></basic-form-mux>
+    </div>
+  </div>
+</div>
