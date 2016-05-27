@@ -1,6 +1,6 @@
 {
   "name": "ng2-formsy",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "clean": "rimraf typings src/**/*.{js,d.ts}",
     "build": "typings install && tsc",
@@ -51,7 +51,7 @@
     "tslint": "^3.10.2",
     "tslint-loader": "^2.1.4",
     "typescript": "^1.8.10",
-    "typings": "^0.8.1",
+    "typings": "^1.0.4",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1",
     "zone.js": "0.6.12"
