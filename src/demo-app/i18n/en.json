@@ -1,7 +1,9 @@
 {
-  "errors": {
-    "required": "Required",
-    "minlength": "Required length {{requiredLength}}, actual length {{actualLength}}",
-    "pattern": "Required pattern {{requiredPattern}}"
+  "validations": {
+    "required": "Required (i18n)",
+    "minlength": "Minimum length {{requiredLength}}, actual length {{actualLength}} (i18n)",
+    "maxlength": "Maximum length {{requiredLength}}, actual length {{actualLength}} (i18n)",
+    "pattern": "Required pattern {{requiredPattern}} (i18n)",
+    "invalidEmailAddress": "Invalid email address (i18n)"
   }
 }

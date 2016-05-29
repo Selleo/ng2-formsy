@@ -3,6 +3,7 @@ import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
 import {IntroductionPage} from './introduction/introduction.page';
 import {BasicPage} from './basic/basic.page';
 import {SignupPage} from './signup/signup.page';
+import {ValidationsPage} from './validations/validations.page';
 import {TranslateService} from 'ng2-translate/ng2-translate';
 
 require('./app.component.scss');
@@ -17,6 +18,7 @@ require('./app.component.scss');
 @RouteConfig([
   {path: '/', name: 'Introduction', component: IntroductionPage, useAsDefault: true},
   {path: '/basic', name: 'Basic', component: BasicPage},
+  {path: '/validations', name: 'Validations', component: ValidationsPage},
   {path: '/signup', name: 'Signup', component: SignupPage},
 ])
 export class AppComponent {

@@ -1,6 +1,6 @@
 import {Component, Input, ViewChild, ViewContainerRef, ComponentResolver, OnInit} from '@angular/core';
 import {FORM_DIRECTIVES, FormBuilder} from '@angular/common';
-import {FORMSY_BS_DIRECTIVES} from 'ng2-formsy';
+import {FORMSY_BS_DIRECTIVES, FORMSY_PROVIDERS} from 'ng2-formsy';
 import {BasicForm} from './basic.form';
 
 @Component({
@@ -23,6 +23,9 @@ export class BasicFormMux implements OnInit {
       directives: [
         FORMSY_BS_DIRECTIVES,
         FORM_DIRECTIVES
+      ],
+      providers: [
+        FORMSY_PROVIDERS
       ]
     })
     class MuxContent extends BasicForm {

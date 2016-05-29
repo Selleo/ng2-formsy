@@ -1,6 +1,6 @@
 {
   "name": "ng2-formsy",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "scripts": {
     "clean": "rimraf typings src/**/*.{js,d.ts}",
     "build": "typings install && tsc",
@@ -58,7 +58,6 @@
   },
   "peerDependencies": {
     "@angular/common": "^2.0.0-rc.0",
-    "@angular/core": "^2.0.0-rc.0",
-    "ng2-translate": "^2.1.0"
+    "@angular/core": "^2.0.0-rc.0"
   }
 }
