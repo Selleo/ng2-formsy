@@ -1,0 +1,63 @@
+<h1 class="page-head">Introduction</h1>
+<div class="row">
+  <div class="col-xs-12 col-md-8">
+    <p>
+      Forms are probably the most crucial aspect of your web application. <a
+      href="https://angular.io/docs/ts/latest/guide/forms.html">Angular 2 forms</a> markup can get quite verbose,
+      particularly when displaying validation errors. Formsy provide UI components that simplify forms markup.
+    </p>
+
+    <p>
+      Formsy components wrap standard inputs and try to leave you as much flexibility in building forms markup as
+      possible. We have started this project with both simple and advanced forms in mind.
+    </p>
+
+    <p>
+      Project was started on <a href="https://www.angularattack.com">AngularAttack 2016</a> where we have been able to
+      implement only few planned features. We hope to add more features and examples in future, like Material Design
+      input container and inline editing container.
+    </p>
+
+    <h2>Features</h2>
+
+    <div class="hero-feature">
+      <div class="hero-feature__grid">
+        <h3>Bootstrap field container</h3>
+        <p>
+          Wrap label, input and error messages in easy to use and flexible <code>bs-input-container</code> component
+        </p>
+      </div>
+
+      <div class="hero-feature__grid">
+        <h3>Validations</h3>
+        <p>
+          Display validations with <code>bs-messages</code> component (currently tied to <code>ng2-translate</code>).
+        </p>
+      </div>
+
+      <div class="hero-feature__grid">
+        <h3>Bootstrap horizontal form</h3>
+        <p>
+          Allow to control label size on form level, ensure errors are displayed right under field.
+        </p>
+      </div>
+    </div>
+
+    <h2>Install</h2>
+    <pre>npm i --save ng2-formsy</pre>
+
+    <h2>Usage</h2>
+    <pre>import {FORMSY_BS_DIRECTIVES} from 'ng2-formsy';</pre>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Markup</h2>
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <pre class="prettyprint">{{ template }}</pre>
+    <h2>Preview</h2>
+    <basic-form-mux [template]="template"></basic-form-mux>
+  </div>
+</div>

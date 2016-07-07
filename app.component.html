@@ -1,0 +1,72 @@
+<header>
+  <nav class="navbar navbar-default navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">ng2-formsy</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a router-active [routerLink]="['Introduction']">Introduction</a>
+            <a router-active [routerLink]="['Basic']">Basic</a>
+            <a router-active [routerLink]="['Validations']">Validations</a>
+            <a router-active [routerLink]="['Signup']">Signup</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="wrapper">
+  <div class="sidebar-wrapper">
+    <div class="sidebar-nav">
+      <div class="logo" >ng2-formsy</div>
+      <ul>
+        <li class="home-link">
+          <a router-active [routerLink]="['Introduction']">
+            <span class="glyphicon glyphicon-education"></span>
+            <span>Introduction</span>
+          </a>
+        </li>
+        <li>
+          <a router-active [routerLink]="['Basic']">
+            <span class="glyphicon glyphicon-play-circle"></span>
+            <span>Basic</span>
+          </a>
+        </li>
+        <li>
+          <a router-active [routerLink]="['Validations']">
+            <span class="glyphicon glyphicon-play-circle"></span>
+            <span>Validations</span>
+          </a>
+        </li>
+        <li>
+          <a router-active [routerLink]="['Signup']">
+            <span class="glyphicon glyphicon-play-circle"></span>
+            <span>Signup</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="main--content">
+          <div><router-outlet></router-outlet></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

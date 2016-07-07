@@ -1,0 +1,23 @@
+<h1 class="page-head">Basic Page</h1>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Code</h2>
+  </div>
+  <div class="col-xs-12 col-md-8">
+    <pre class="prettyprint">{{ codeTs }}</pre>
+  </div>
+</div>
+
+<div *ngFor="let template of templates">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2> {{ template.title }}</h2>
+    </div>
+    <div class="col-xs-12 col-md-8">
+      <pre class="prettyprint">{{ template.markup }}</pre>
+      <h2>Preview</h2>
+      <basic-form-mux [template]="template.markup"></basic-form-mux>
+    </div>
+  </div>
+</div>
