@@ -4,10 +4,11 @@
   "scripts": {
     "clean": "rimraf typings src/**/*.{js,d.ts}",
     "build": "typings install && tsc",
+    "build:prod": "npm run build && webpack",
     "lint": "tslint src/*.ts",
     "start": "webpack-dev-server",
-    "start:dist": "webpack && http-server -p 3000 ./dist",
-    "deploy": "surge --project ./dist --domain formsy.2016.angularattack.io",
+    "start:prod": "webpack && http-server -p 3000 ./dist",
+    "deploy": "npm run build:prod && cd ./dist && git add . && git commit -am 'update' && git push",
     "prepublish": "npm run lint && npm run build",
     "postinstall": "npm run build"
   },

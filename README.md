@@ -1,4 +1,4 @@
-# [angularattack2016-formsy](http://formsy.2016.angularattack.io/)
+# [ng2-formsy](http://tb.github.io/ng2-formsy/)
 
 ## Install
 
@@ -25,7 +25,7 @@
     
 ### Deployment
 
-    npm run start:dist
+    git submodule add -b gh-pages git@github.com:tb/ng2-formsy.git dist
     npm run deploy
 
 ## License
